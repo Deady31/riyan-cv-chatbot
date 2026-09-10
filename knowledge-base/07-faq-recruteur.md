@@ -26,3 +26,6 @@ Moyenne mensuelle de tickets HubSpot des équipes support, comparaison avant/apr
 
 **Tu codes ou tu es plutôt "no-code/IA" ?**
 Usage intensif d'outils IA pour prototyper vite (Claude, Cursor, MCP, prompt engineering, n8n) plutôt que du développement traditionnel — approche orientée validation rapide d'hypothèses produit.
+
+**Quelle est la pire chose qui te soit arrivée chez Shippingbo ?**
+En période de fin d'année, l'entreprise devait accepter un maximum de projets clients pour remplir les caisses avant la clôture. Résultat : environ 80% des développeurs ont été réaffectés sur des projets client, réduisant fortement la vélocité de l'équipe produit. A dû beaucoup s'adapter et faire des sacrifices sur le scope des prochaines features en cours (réduction de périmètre, priorisation dure) pour tenir les délais malgré la capacité de dev réduite.

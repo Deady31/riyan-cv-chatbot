@@ -3,6 +3,7 @@ import { join } from "path";
 import { NextRequest } from "next/server";
 import { embedText, startChatStream } from "@/lib/gemini";
 import { getSupabase } from "@/lib/supabase";
+import { flagUnanswered, isUnanswered } from "@/lib/alerts";
 
 export const runtime = "nodejs";
 
@@ -77,15 +78,20 @@ export async function POST(req: NextRequest) {
   const stream = new ReadableStream({
     async start(controller) {
       const encoder = new TextEncoder();
+      let fullText = "";
       try {
         for await (const chunk of result.stream) {
           const text = chunk.text();
-          if (text) controller.enqueue(encoder.encode(text));
+          if (text) {
+            fullText += text;
+            controller.enqueue(encoder.encode(text));
+          }
         }
       } catch (err) {
         console.error("Erreur streaming:", err);
       } finally {
         controller.close();
+        if (isUnanswered(fullText)) void flagUnanswered(lastUserMessage.content);
       }
     },
   });
