@@ -1,9 +1,12 @@
 "use client";
 
-import { FormEvent, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
+import { motion } from "motion/react";
 import Avatar from "./components/Avatar";
 import CopyButton from "./components/CopyButton";
 import MessageContent from "./components/MessageContent";
+import TypingIndicator from "./components/TypingIndicator";
+import { playReceive, playSend } from "@/lib/sound";
 
 type ChatMessage = { role: "user" | "assistant"; content: string; time: string };
 
@@ -14,6 +17,9 @@ const SUGGESTIONS = [
   "Tes prétentions salariales",
 ];
 
+const BUBBLE_SPRING = { type: "spring", stiffness: 380, damping: 28, mass: 0.8 } as const;
+const MUTE_STORAGE_KEY = "chatbot-muted";
+
 function now(): string {
   return new Date().toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit" });
 }
@@ -22,7 +28,28 @@ export default function ChatPage() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState("");
   const [isStreaming, setIsStreaming] = useState(false);
+  const [muted, setMuted] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    try {
+      setMuted(localStorage.getItem(MUTE_STORAGE_KEY) === "1");
+    } catch {
+      // localStorage indisponible — reste non muet par défaut.
+    }
+  }, []);
+
+  function toggleMute() {
+    setMuted((prev) => {
+      const next = !prev;
+      try {
+        localStorage.setItem(MUTE_STORAGE_KEY, next ? "1" : "0");
+      } catch {
+        // ignore
+      }
+      return next;
+    });
+  }
 
   async function sendMessage(content: string) {
     if (!content.trim() || isStreaming) return;
@@ -31,6 +58,7 @@ export default function ChatPage() {
     setMessages(nextMessages);
     setInput("");
     setIsStreaming(true);
+    if (!muted) playSend();
 
     setMessages((prev) => [...prev, { role: "assistant", content: "", time: now() }]);
 
@@ -60,6 +88,8 @@ export default function ChatPage() {
         });
         bottomRef.current?.scrollIntoView({ behavior: "smooth" });
       }
+
+      if (!muted) playReceive();
     } catch (err) {
       const fallback =
         "Oups, erreur de mon côté. Réessaie dans un instant, ou contacte-moi directement sur LinkedIn.";
@@ -90,10 +120,28 @@ export default function ChatPage() {
         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-semibold shadow-[0_2px_10px_rgba(0,0,0,0.4)]">
           RB
         </div>
-        <div>
+        <div className="flex-1">
           <h1 className="text-base font-semibold tracking-tight">Riyan Besseghir</h1>
           <p className="text-xs text-white/50">Mon CV ne répond plus — pose-moi tes questions</p>
         </div>
+        <button
+          type="button"
+          onClick={toggleMute}
+          aria-label={muted ? "Activer le son" : "Couper le son"}
+          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white/50 transition-colors hover:bg-white/10 hover:text-white"
+        >
+          {muted ? (
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M11 5 6 9H2v6h4l5 4V5Z" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="m23 9-6 6M17 9l6 6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          ) : (
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M11 5 6 9H2v6h4l5 4V5Z" strokeLinecap="round" strokeLinejoin="round" />
+              <path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          )}
+        </button>
       </header>
 
       {/* Messages glass panel */}
@@ -106,11 +154,13 @@ export default function ChatPage() {
         )}
 
         {messages.map((m, i) => (
-          <div
+          <motion.div
             key={i}
-            className={`group flex animate-fade-up items-end gap-1.5 ${
-              m.role === "user" ? "justify-end" : "justify-start"
-            }`}
+            initial={{ opacity: 0, scale: 0.85, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={BUBBLE_SPRING}
+            style={{ transformOrigin: m.role === "user" ? "100% 100%" : "0% 100%" }}
+            className={`group flex items-end gap-1.5 ${m.role === "user" ? "justify-end" : "justify-start"}`}
           >
             {m.role === "assistant" && <Avatar />}
             {m.role === "assistant" && m.content && <CopyButton text={m.content} />}
@@ -126,11 +176,7 @@ export default function ChatPage() {
                 {m.content ? (
                   <MessageContent text={m.content} />
                 ) : isStreaming && i === messages.length - 1 ? (
-                  <span className="inline-flex gap-1">
-                    <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-white/50 [animation-delay:-0.3s]" />
-                    <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-white/50 [animation-delay:-0.15s]" />
-                    <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-white/50" />
-                  </span>
+                  <TypingIndicator size={6} />
                 ) : null}
               </div>
               <span className={`mt-1 text-[10px] text-white/35 ${m.role === "user" ? "text-right" : "text-left"}`}>
@@ -138,7 +184,7 @@ export default function ChatPage() {
               </span>
             </div>
             {m.role === "user" && <CopyButton text={m.content} />}
-          </div>
+          </motion.div>
         ))}
         <div ref={bottomRef} />
       </div>
@@ -169,16 +215,17 @@ export default function ChatPage() {
           className="flex-1 bg-transparent px-3 py-2 text-sm text-white placeholder-white/40 outline-none"
           disabled={isStreaming}
         />
-        <button
+        <motion.button
           type="submit"
           disabled={isStreaming || !input.trim()}
           aria-label="Envoyer"
+          whileTap={{ scale: 0.88 }}
           className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent text-white shadow-[0_2px_10px_rgba(0,0,0,0.4)] transition-transform hover:scale-105 disabled:opacity-40 disabled:hover:scale-100"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
             <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-        </button>
+        </motion.button>
       </form>
     </main>
   );
