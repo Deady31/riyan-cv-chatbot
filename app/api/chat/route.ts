@@ -1,7 +1,8 @@
 import { readFileSync } from "fs";
 import { join } from "path";
 import { NextRequest } from "next/server";
-import { embedText, startChatStream } from "@/lib/gemini";
+import { embedText } from "@/lib/gemini";
+import { streamReply } from "@/lib/chat";
 import { getSupabase } from "@/lib/supabase";
 import { flagUnanswered, isUnanswered } from "@/lib/alerts";
 
@@ -13,6 +14,8 @@ const SYSTEM_PROMPT = readFileSync(join(process.cwd(), "system-prompt.md"), "utf
 const MATCH_COUNT = 5;
 const RATE_LIMIT_MAX = 20;
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
+const BUSY_MESSAGE =
+  "Trop de monde teste le chatbot en même temps là — réessaie dans une minute, ou contacte-moi direct sur LinkedIn.";
 
 // Rate limiting en mémoire, simple et suffisant pour un trafic perso mono-instance
 const rateLimitStore = new Map<string, { count: number; windowStart: number }>();
@@ -64,15 +67,17 @@ export async function POST(req: NextRequest) {
     parts: [{ text: m.content }],
   }));
 
-  let result;
+  const replyGen = streamReply(systemInstruction, history, lastUserMessage.content);
+
+  // On tire le premier chunk avant de répondre : si tous les fournisseurs
+  // échouent d'entrée, on peut encore renvoyer un vrai statut 503 avec un
+  // message clair plutôt qu'un stream 200 vide.
+  let first: IteratorResult<string>;
   try {
-    result = await startChatStream(systemInstruction, history, lastUserMessage.content);
+    first = await replyGen.next();
   } catch (err) {
     console.error("Erreur génération chat:", err);
-    return new Response(
-      "Trop de monde teste le chatbot en même temps là — réessaie dans une minute, ou contacte-moi direct sur LinkedIn.",
-      { status: 503 }
-    );
+    return new Response(BUSY_MESSAGE, { status: 503 });
   }
 
   const stream = new ReadableStream({
@@ -80,12 +85,13 @@ export async function POST(req: NextRequest) {
       const encoder = new TextEncoder();
       let fullText = "";
       try {
-        for await (const chunk of result.stream) {
-          const text = chunk.text();
-          if (text) {
-            fullText += text;
-            controller.enqueue(encoder.encode(text));
-          }
+        if (!first.done && first.value) {
+          fullText += first.value;
+          controller.enqueue(encoder.encode(first.value));
+        }
+        for await (const text of replyGen) {
+          fullText += text;
+          controller.enqueue(encoder.encode(text));
         }
       } catch (err) {
         console.error("Erreur streaming:", err);

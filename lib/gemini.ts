@@ -1,4 +1,5 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import type { ChatHistoryEntry } from "./chat";
 
 const EMBEDDING_MODEL = "gemini-embedding-001";
 const EMBEDDING_DIMENSIONS = 768;
@@ -73,25 +74,34 @@ async function withRetry503<T>(fn: () => Promise<T>, retries = 2): Promise<T> {
   }
 }
 
-type ChatHistoryEntry = { role: "user" | "model"; parts: { text: string }[] };
-
 // Essaie chaque modèle de la cascade jusqu'à ce qu'un réponde ; ne bascule
-// sur le suivant que pour un 429 quota (les autres erreurs remontent direct).
-export async function startChatStream(
+// sur le suivant que pour un 429 quota ou 404 modèle disparu.
+export async function* streamGeminiReply(
   systemInstruction: string,
   history: ChatHistoryEntry[],
   message: string
-) {
+): AsyncGenerator<string> {
   let lastError: unknown;
   for (const modelName of CHAT_MODELS) {
     const model = getClient().getGenerativeModel({ model: modelName, systemInstruction });
     const chat = model.startChat({ history });
+
+    let result: Awaited<ReturnType<typeof chat.sendMessageStream>>;
     try {
-      return await withRetry503(() => chat.sendMessageStream(message));
+      result = await withRetry503(() => chat.sendMessageStream(message));
     } catch (err) {
       lastError = err;
       if (!shouldFallback(err)) throw err;
+      continue;
     }
+
+    // Une fois le stream initié avec succès, plus de bascule sur erreur —
+    // évite de mélanger deux réponses (même règle que Groq/Gemini dans chat.ts).
+    for await (const chunk of result.stream) {
+      const text = chunk.text();
+      if (text) yield text;
+    }
+    return;
   }
   throw lastError;
 }
