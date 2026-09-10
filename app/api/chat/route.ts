@@ -1,7 +1,7 @@
 import { readFileSync } from "fs";
 import { join } from "path";
 import { NextRequest } from "next/server";
-import { embedText, getChatModel } from "@/lib/gemini";
+import { embedText, startChatStream } from "@/lib/gemini";
 import { getSupabase } from "@/lib/supabase";
 
 export const runtime = "nodejs";
@@ -27,19 +27,6 @@ function isRateLimited(ip: string): boolean {
   return entry.count > RATE_LIMIT_MAX;
 }
 
-// Le free tier Gemini renvoie parfois un 503 transitoire en cas de forte demande.
-async function sendWithRetry<T>(fn: () => Promise<T>, retries = 2): Promise<T> {
-  for (let attempt = 0; ; attempt++) {
-    try {
-      return await fn();
-    } catch (err) {
-      const is503 = err instanceof Error && err.message.includes("503");
-      if (!is503 || attempt >= retries) throw err;
-      await new Promise((resolve) => setTimeout(resolve, 500 * (attempt + 1)));
-    }
-  }
-}
-
 export async function POST(req: NextRequest) {
   const ip = req.headers.get("x-forwarded-for") ?? "unknown";
   if (isRateLimited(ip)) {
@@ -56,30 +43,36 @@ export async function POST(req: NextRequest) {
     return new Response("Aucun message utilisateur trouvé.", { status: 400 });
   }
 
-  // Retrieval : embed la question, cherche les chunks les plus proches
-  const queryEmbedding = await embedText(lastUserMessage.content);
-  const { data: matches, error } = await getSupabase().rpc("match_documents", {
-    query_embedding: queryEmbedding,
-    match_count: MATCH_COUNT,
-  });
-  if (error) {
-    console.error("Erreur retrieval:", error);
+  let context = "";
+  try {
+    // Retrieval : embed la question, cherche les chunks les plus proches
+    const queryEmbedding = await embedText(lastUserMessage.content);
+    const { data: matches, error } = await getSupabase().rpc("match_documents", {
+      query_embedding: queryEmbedding,
+      match_count: MATCH_COUNT,
+    });
+    if (error) console.error("Erreur retrieval:", error);
+    context = (matches ?? []).map((m: { content: string }) => m.content).join("\n\n---\n\n");
+  } catch (err) {
+    console.error("Erreur embedding:", err);
   }
 
-  const context = (matches ?? [])
-    .map((m: { content: string }) => m.content)
-    .join("\n\n---\n\n");
-
   const systemInstruction = `${SYSTEM_PROMPT}\n\n## Contexte pertinent pour cette question\n\n${context}`;
-
-  const model = getChatModel(systemInstruction);
   const history = messages.slice(0, -1).map((m) => ({
-    role: m.role === "user" ? "user" : "model",
+    role: m.role === "user" ? ("user" as const) : ("model" as const),
     parts: [{ text: m.content }],
   }));
 
-  const chat = model.startChat({ history });
-  const result = await sendWithRetry(() => chat.sendMessageStream(lastUserMessage.content));
+  let result;
+  try {
+    result = await startChatStream(systemInstruction, history, lastUserMessage.content);
+  } catch (err) {
+    console.error("Erreur génération chat:", err);
+    return new Response(
+      "Trop de monde teste le chatbot en même temps là — réessaie dans une minute, ou contacte-moi direct sur LinkedIn.",
+      { status: 503 }
+    );
+  }
 
   const stream = new ReadableStream({
     async start(controller) {

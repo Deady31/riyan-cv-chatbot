@@ -60,12 +60,15 @@ export default function ChatPage() {
         });
         bottomRef.current?.scrollIntoView({ behavior: "smooth" });
       }
-    } catch {
+    } catch (err) {
+      const fallback =
+        "Oups, erreur de mon côté. Réessaie dans un instant, ou contacte-moi directement sur LinkedIn.";
+      const message = err instanceof Error && err.message ? err.message : fallback;
       setMessages((prev) => {
         const updated = [...prev];
         updated[updated.length - 1] = {
           role: "assistant",
-          content: "Oups, erreur de mon côté. Réessaie dans un instant, ou contacte-moi directement sur LinkedIn.",
+          content: message,
           time: updated[updated.length - 1].time,
         };
         return updated;
