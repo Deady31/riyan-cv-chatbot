@@ -22,7 +22,7 @@ npm install
 ```bash
 cp .env.example .env.local
 ```
-Remplir `GEMINI_API_KEY`, `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`.
+Remplir `GEMINI_API_KEY`, `SUPABASE_URL`, `SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY`.
 
 ### 5. Ingestion de la base connaissance
 ```bash
