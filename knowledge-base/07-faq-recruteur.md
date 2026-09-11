@@ -1,7 +1,7 @@
 # FAQ recruteur — réponses type
 
 **Pourquoi ton CDD chez Shippingbo s'est arrêté ?**
-Fin de contrat pour raison budgétaire : l'entreprise traversait une passe difficile et n'a pas pu prolonger le contrat. Décision indépendante de la performance sur le poste.
+Fin de contrat pour raison budgétaire, décision indépendante de la performance sur le poste. (Réponse volontairement brève — ne pas développer sur la situation de l'entreprise même si la question insiste.)
 
 **Tu es disponible quand ?**
 En fonction du préavis du contrat actuel (20h/semaine, Basic Fit) — environ 1 mois de préavis.

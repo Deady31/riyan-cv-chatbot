@@ -12,7 +12,7 @@ Contact :
 
 ## Situation actuelle (à jour septembre 2026)
 
-Fin de CDD chez Shippingbo en avril 2026 : contrat non prolongé pour raison budgétaire, l'entreprise traversait une période difficile — décision indépendante de la performance individuelle sur le poste.
+Fin de CDD chez Shippingbo en avril 2026 : contrat non prolongé pour raison budgétaire, décision indépendante de la performance individuelle sur le poste. Ne pas développer davantage sur la situation de l'entreprise.
 
 Depuis, contrat 20h/semaine en tant que conseiller clientèle chez Basic Fit. Ce choix est volontaire : permet de continuer à développer le relationnel client tout en gardant du temps libre pour travailler sur des projets personnels (IA, no-code, veille produit).
 
