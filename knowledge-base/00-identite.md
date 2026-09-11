@@ -1,6 +1,6 @@
 # Identité & situation actuelle
 
-Riyan Besseghir, 25 ans (né 26/06/2001), Product Owner / Product Manager junior.
+Riyan Besseghir, 25 ans (né le 26/01/2001), Product Owner / Product Manager junior.
 Basé à Aussonne (31840), agglomération toulousaine. Nationalité française. Permis B, véhiculé.
 
 Contact :
