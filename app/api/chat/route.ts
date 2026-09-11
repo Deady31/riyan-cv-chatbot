@@ -5,6 +5,7 @@ import { embedText } from "@/lib/gemini";
 import { streamReply } from "@/lib/chat";
 import { getSupabase } from "@/lib/supabase";
 import { flagUnanswered, isUnanswered } from "@/lib/alerts";
+import { ensureConversation, logMessage } from "@/lib/conversations";
 
 export const runtime = "nodejs";
 
@@ -37,7 +38,7 @@ export async function POST(req: NextRequest) {
     return new Response("Trop de requêtes, réessaie dans quelques minutes.", { status: 429 });
   }
 
-  const { messages }: { messages: ChatMessage[] } = await req.json();
+  const { messages, conversationId }: { messages: ChatMessage[]; conversationId?: string } = await req.json();
   if (!messages?.length) {
     return new Response("Aucun message reçu.", { status: 400 });
   }
@@ -45,6 +46,13 @@ export async function POST(req: NextRequest) {
   const lastUserMessage = [...messages].reverse().find((m) => m.role === "user");
   if (!lastUserMessage) {
     return new Response("Aucun message utilisateur trouvé.", { status: 400 });
+  }
+
+  // Persistance pour le dashboard admin — jamais bloquant pour la réponse au visiteur.
+  if (conversationId) {
+    void ensureConversation(conversationId).then(() =>
+      logMessage(conversationId, "user", lastUserMessage.content)
+    );
   }
 
   let context = "";
@@ -97,7 +105,13 @@ export async function POST(req: NextRequest) {
         console.error("Erreur streaming:", err);
       } finally {
         controller.close();
-        if (isUnanswered(fullText)) void flagUnanswered(lastUserMessage.content);
+        if (conversationId) void logMessage(conversationId, "assistant", fullText);
+        if (isUnanswered(fullText)) {
+          void flagUnanswered(conversationId, lastUserMessage.content, [
+            ...messages,
+            { role: "assistant", content: fullText },
+          ]);
+        }
       }
     },
   });

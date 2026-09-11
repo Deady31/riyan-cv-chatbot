@@ -1,6 +1,6 @@
 # Formation
 
-## Master AES – Gestion des Entreprises (2023-2025)
+## Master Administration Économique et Sociale, option Gouvernance des Entreprises (2023-2025)
 Université Toulouse Capitole.
 - Gestion de projet : dashboard pour l'Agence Nationale de la Santé — collecte, analyse et visualisation de données.
 - Data & BI : modélisation BDD, requêtes SQL, tableaux de bord Power BI.

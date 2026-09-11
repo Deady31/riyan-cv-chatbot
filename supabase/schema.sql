@@ -46,11 +46,51 @@ create policy "Public read access"
   to anon
   using (true);
 
+-- Conversations : une ligne par session visiteur (id généré côté client,
+-- persisté en localStorage). Permet de reconstituer l'historique complet
+-- pour le dashboard admin.
+create table if not exists conversations (
+  id uuid primary key,
+  created_at timestamptz not null default now(),
+  last_message_at timestamptz not null default now()
+);
+
+create table if not exists messages (
+  id bigint generated always as identity primary key,
+  conversation_id uuid not null references conversations(id) on delete cascade,
+  role text not null check (role in ('user', 'assistant')),
+  content text not null,
+  created_at timestamptz not null default now()
+);
+
+create index if not exists messages_conversation_id_idx on messages (conversation_id);
+
+alter table conversations enable row level security;
+alter table messages enable row level security;
+
+-- Écriture seule (anon) : le chat écrit, seul service_role (dashboard admin)
+-- peut relire les conversations des visiteurs.
+create policy "Public insert conversations"
+  on conversations for insert
+  to anon
+  with check (true);
+
+create policy "Public update conversations"
+  on conversations for update
+  to anon
+  using (true);
+
+create policy "Public insert messages"
+  on messages for insert
+  to anon
+  with check (true);
+
 -- Log des questions auxquelles le bot n'a pas su répondre (détecté côté route
 -- API via la formule de repli exacte du prompt système). Sert de base pour
 -- l'alerte Discord et pour repérer les trous de la base connaissance.
 create table if not exists unanswered_questions (
   id bigint generated always as identity primary key,
+  conversation_id uuid references conversations(id) on delete set null,
   question text not null,
   created_at timestamptz not null default now()
 );
@@ -58,7 +98,7 @@ create table if not exists unanswered_questions (
 alter table unanswered_questions enable row level security;
 
 -- Écriture seule (anon) : le chat insère, mais ne peut pas relire les questions
--- des autres visiteurs. La lecture se fait via le SQL Editor / service_role.
+-- des autres visiteurs. La lecture se fait via le dashboard admin / service_role.
 create policy "Public insert access"
   on unanswered_questions for insert
   to anon

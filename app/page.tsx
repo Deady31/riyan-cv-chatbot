@@ -9,6 +9,7 @@ import MessageContent from "./components/MessageContent";
 import TypingIndicator from "./components/TypingIndicator";
 import Onboarding from "./components/Onboarding";
 import { playReceive, playSend } from "@/lib/sound";
+import { getOrCreateConversationId } from "@/lib/clientConversation";
 
 type ChatMessage = { role: "user" | "assistant"; content: string; time: string };
 
@@ -32,6 +33,7 @@ export default function ChatPage() {
   const [isStreaming, setIsStreaming] = useState(false);
   const [muted, setMuted] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
+  const conversationIdRef = useRef<string>("");
 
   useEffect(() => {
     try {
@@ -39,6 +41,7 @@ export default function ChatPage() {
     } catch {
       // localStorage indisponible — reste non muet par défaut.
     }
+    conversationIdRef.current = getOrCreateConversationId();
   }, []);
 
   function toggleMute() {
@@ -68,7 +71,10 @@ export default function ChatPage() {
       const res = await fetch("/api/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: nextMessages.map(({ role, content }) => ({ role, content })) }),
+        body: JSON.stringify({
+          messages: nextMessages.map(({ role, content }) => ({ role, content })),
+          conversationId: conversationIdRef.current,
+        }),
       });
 
       if (!res.ok || !res.body) {
