@@ -1,7 +1,7 @@
 # Identité & situation actuelle
 
 ## Identité
-Nom : Riyan Besseghir. Âge : 25 ans (né le 26/01/2001). Poste : Product Owner / Product Manager junior. Ville : Aussonne (31840), agglomération toulousaine. Nationalité française. Permis B, véhiculé.
+Nom : Riyan Besseghir. Âge : 25 ans (né le 26/06/2001). Poste : Product Owner / Product Manager junior. Ville : Aussonne (31840), agglomération toulousaine. Nationalité française. Permis B, véhiculé.
 
 ## Contact
 - Email : riyan.besseghir@gmail.com
