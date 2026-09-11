@@ -120,19 +120,19 @@ export default function ChatPage() {
       <Onboarding />
       <main className="mx-auto flex h-screen max-w-2xl flex-col px-4 py-6 sm:py-8">
       {/* Header glass pill */}
-      <header className="mb-4 flex items-center gap-3 rounded-3xl border border-white/10 bg-white/[0.05] px-5 py-4 shadow-[0_8px_32px_rgba(0,0,0,0.45)] backdrop-blur-2xl">
+      <header className="mb-4 flex items-center gap-3 rounded-3xl border border-white/10 bg-black/45 px-5 py-4 shadow-[0_8px_32px_rgba(0,0,0,0.45)] backdrop-blur-2xl">
         <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.4)]">
           <Image src="/meca-riyan.jpg" alt="Méca-Riyan" width={40} height={40} className="h-full w-full object-cover" />
         </div>
         <div className="flex-1">
-          <h1 className="text-base font-semibold tracking-tight">Méca-Riyan</h1>
-          <p className="text-xs text-white/50">Mon CV ne répond plus — pose-moi tes questions</p>
+          <h1 className="text-shadow-glass text-base font-semibold tracking-tight">Méca-Riyan</h1>
+          <p className="text-shadow-glass text-xs text-white/70">Mon CV ne répond plus — pose-moi tes questions</p>
         </div>
         <button
           type="button"
           onClick={toggleMute}
           aria-label={muted ? "Activer le son" : "Couper le son"}
-          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white/50 transition-colors hover:bg-white/10 hover:text-white"
+          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-white/70 transition-colors hover:bg-white/10 hover:text-white"
         >
           {muted ? (
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -149,9 +149,9 @@ export default function ChatPage() {
       </header>
 
       {/* Messages glass panel */}
-      <div className="flex-1 space-y-3 overflow-y-auto rounded-[28px] border border-white/10 bg-white/[0.04] p-4 shadow-[0_8px_40px_rgba(0,0,0,0.45)] backdrop-blur-2xl sm:p-5">
+      <div className="flex-1 space-y-3 overflow-y-auto rounded-[28px] border border-white/10 bg-black/40 p-4 shadow-[0_8px_40px_rgba(0,0,0,0.45)] backdrop-blur-2xl sm:p-5">
         {messages.length === 0 && (
-          <p className="animate-fade-up text-sm leading-relaxed text-white/55">
+          <p className="text-shadow-glass animate-fade-up text-sm leading-relaxed text-white/75">
             Recruteur, manager, curieux — demande-moi ce que tu veux sur mon parcours, mes projets ou mes
             compétences. Les suggestions en bas peuvent t&apos;aider à démarrer.
           </p>
@@ -183,7 +183,7 @@ export default function ChatPage() {
                   <TypingIndicator size={6} />
                 ) : null}
               </div>
-              <span className={`mt-1 text-[10px] text-white/35 ${m.role === "user" ? "text-right" : "text-left"}`}>
+              <span className={`text-shadow-glass mt-1 text-[10px] text-white/55 ${m.role === "user" ? "text-right" : "text-left"}`}>
                 {m.time}
               </span>
             </div>
@@ -200,7 +200,7 @@ export default function ChatPage() {
             key={s}
             onClick={() => sendMessage(s)}
             disabled={isStreaming}
-            className="shrink-0 whitespace-nowrap rounded-full border border-white/12 bg-white/[0.05] px-3.5 py-2 text-xs font-medium text-white/70 shadow-[0_2px_8px_rgba(0,0,0,0.3)] backdrop-blur-xl transition-all hover:border-accent/40 hover:bg-white/10 hover:text-white disabled:opacity-40"
+            className="text-shadow-glass shrink-0 whitespace-nowrap rounded-full border border-white/12 bg-black/45 px-3.5 py-2 text-xs font-medium text-white/85 shadow-[0_2px_8px_rgba(0,0,0,0.3)] backdrop-blur-xl transition-all hover:border-accent/40 hover:bg-black/55 hover:text-white disabled:opacity-40"
           >
             {s}
           </button>
@@ -210,13 +210,13 @@ export default function ChatPage() {
       {/* Input glass pill */}
       <form
         onSubmit={handleSubmit}
-        className="mt-3 flex items-center gap-2 rounded-full border border-white/12 bg-white/[0.06] p-1.5 shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-2xl focus-within:border-accent/50"
+        className="mt-3 flex items-center gap-2 rounded-full border border-white/12 bg-black/45 p-1.5 shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-2xl focus-within:border-accent/50"
       >
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder="Pose ta question..."
-          className="flex-1 bg-transparent px-3 py-2 text-sm text-white placeholder-white/40 outline-none"
+          className="text-shadow-glass flex-1 bg-transparent px-3 py-2 text-sm text-white placeholder-white/55 outline-none"
           disabled={isStreaming}
         />
         <motion.button

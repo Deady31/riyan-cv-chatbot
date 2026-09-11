@@ -41,7 +41,7 @@ export default function Onboarding() {
     <AnimatePresence>
       {!exiting && (
         <motion.div
-          className="fixed inset-0 z-50 flex flex-col items-center justify-center px-6 text-center backdrop-blur-2xl"
+          className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/55 px-6 text-center backdrop-blur-2xl"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, scale: 1.08, filter: "blur(12px)" }}
@@ -60,7 +60,7 @@ export default function Onboarding() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.22, duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-            className="mt-5 text-2xl font-semibold tracking-tight sm:text-3xl"
+            className="text-shadow-glass mt-5 text-2xl font-semibold tracking-tight sm:text-3xl"
           >
             Bienvenue sur Méca-Riyan
           </motion.h1>
@@ -69,7 +69,7 @@ export default function Onboarding() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-            className="mt-3 max-w-sm text-sm leading-relaxed text-white/60"
+            className="text-shadow-glass mt-3 max-w-sm text-sm leading-relaxed text-white/80"
           >
             Mon CV ne répond plus, alors je l&apos;ai remplacé par ça. Pose-moi tes
             questions sur mon parcours, mes projets, mes compétences, même les plus
@@ -85,7 +85,7 @@ export default function Onboarding() {
             {EXAMPLES.map((ex) => (
               <span
                 key={ex}
-                className="rounded-full border border-white/12 bg-white/[0.05] px-3 py-1.5 text-xs text-white/60"
+                className="text-shadow-glass rounded-full border border-white/12 bg-black/45 px-3 py-1.5 text-xs text-white/80"
               >
                 {ex}
               </span>

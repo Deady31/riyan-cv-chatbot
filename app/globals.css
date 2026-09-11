@@ -6,6 +6,13 @@
   background: rgba(255, 122, 69, 0.35);
 }
 
+/* Plancher de contraste pour le texte posé sur les panneaux verre : le fond
+   WebGL alterne noir/blanc en continu, une ombre garantit la lisibilité quel
+   que soit ce qu'il y a derrière au moment T. */
+.text-shadow-glass {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
 /* Scrollbar discret, cohérent avec l'esthétique glass */
 * {
   scrollbar-width: thin;
