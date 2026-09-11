@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "motion/react";
 import { LiquidMetalButton } from "./LiquidMetalButton";
 
@@ -50,9 +51,9 @@ export default function Onboarding() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-accent text-sm font-semibold shadow-[0_2px_10px_rgba(0,0,0,0.4)]"
+            className="h-11 w-11 overflow-hidden rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.4)]"
           >
-            RB
+            <Image src="/meca-riyan.jpg" alt="Méca-Riyan" width={44} height={44} className="h-full w-full object-cover" />
           </motion.div>
 
           <motion.h1
@@ -61,7 +62,7 @@ export default function Onboarding() {
             transition={{ delay: 0.22, duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
             className="mt-5 text-2xl font-semibold tracking-tight sm:text-3xl"
           >
-            Bienvenue sur le chatbot de Riyan
+            Bienvenue sur Méca-Riyan
           </motion.h1>
 
           <motion.p

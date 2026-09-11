@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { motion } from "motion/react";
 import Avatar from "./components/Avatar";
 import CopyButton from "./components/CopyButton";
@@ -120,11 +121,11 @@ export default function ChatPage() {
       <main className="mx-auto flex h-screen max-w-2xl flex-col px-4 py-6 sm:py-8">
       {/* Header glass pill */}
       <header className="mb-4 flex items-center gap-3 rounded-3xl border border-white/10 bg-white/[0.05] px-5 py-4 shadow-[0_8px_32px_rgba(0,0,0,0.45)] backdrop-blur-2xl">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-semibold shadow-[0_2px_10px_rgba(0,0,0,0.4)]">
-          RB
+        <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.4)]">
+          <Image src="/meca-riyan.jpg" alt="Méca-Riyan" width={40} height={40} className="h-full w-full object-cover" />
         </div>
         <div className="flex-1">
-          <h1 className="text-base font-semibold tracking-tight">Riyan Besseghir</h1>
+          <h1 className="text-base font-semibold tracking-tight">Méca-Riyan</h1>
           <p className="text-xs text-white/50">Mon CV ne répond plus — pose-moi tes questions</p>
         </div>
         <button
