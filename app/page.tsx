@@ -173,7 +173,7 @@ export default function ChatPage() {
                   "whitespace-pre-wrap rounded-3xl px-4 py-2.5 text-sm leading-relaxed shadow-[0_2px_10px_rgba(0,0,0,0.35)] " +
                   (m.role === "user"
                     ? "rounded-br-md bg-accent text-white"
-                    : "rounded-bl-md border border-white/10 bg-white/[0.07] text-white/90 backdrop-blur-xl")
+                    : "rounded-bl-md bg-white text-ink")
                 }
               >
                 {m.content ? (

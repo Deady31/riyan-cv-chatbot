@@ -44,7 +44,7 @@ export default function MessageContent({ text }: { text: string }) {
             href={part.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-accent underline decoration-accent/40 underline-offset-2 hover:text-white"
+            className="text-accent underline decoration-accent/40 underline-offset-2 hover:opacity-70"
           >
             {part.label}
           </a>

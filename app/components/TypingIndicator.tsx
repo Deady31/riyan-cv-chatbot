@@ -18,7 +18,7 @@ function Dot({ index, wave, size }: { index: number; wave: MotionValue<number>; 
   const scale = useTransform(lift, [0, 1], [0.74, 1]);
   const opacity = useTransform(lift, [0, 1], [0.35, 1]);
 
-  return <motion.span className="block rounded-full bg-white" style={{ width: size, height: size, scale, opacity }} />;
+  return <motion.span className="block rounded-full bg-ink" style={{ width: size, height: size, scale, opacity }} />;
 }
 
 export default function TypingIndicator({ size = 6 }: { size?: number }) {
@@ -43,7 +43,7 @@ export default function TypingIndicator({ size = 6 }: { size?: number }) {
     <span className="inline-flex items-center gap-1.5">
       {[0, 1, 2].map((i) =>
         reduced ? (
-          <span key={i} className="block rounded-full bg-white/60" style={{ width: size, height: size }} />
+          <span key={i} className="block rounded-full bg-ink/60" style={{ width: size, height: size }} />
         ) : (
           <Dot key={i} index={i} wave={wave} size={size} />
         )
