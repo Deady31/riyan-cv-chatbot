@@ -12,7 +12,7 @@ export const runtime = "nodejs";
 type ChatMessage = { role: "user" | "assistant"; content: string };
 
 const SYSTEM_PROMPT = readFileSync(join(process.cwd(), "system-prompt.md"), "utf-8");
-const MATCH_COUNT = 5;
+const MATCH_COUNT = 7;
 const RATE_LIMIT_MAX = 20;
 const RATE_LIMIT_WINDOW_MS = 10 * 60 * 1000;
 const BUSY_MESSAGE =
