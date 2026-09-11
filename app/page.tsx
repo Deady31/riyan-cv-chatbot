@@ -6,6 +6,7 @@ import Avatar from "./components/Avatar";
 import CopyButton from "./components/CopyButton";
 import MessageContent from "./components/MessageContent";
 import TypingIndicator from "./components/TypingIndicator";
+import Onboarding from "./components/Onboarding";
 import { playReceive, playSend } from "@/lib/sound";
 
 type ChatMessage = { role: "user" | "assistant"; content: string; time: string };
@@ -114,7 +115,9 @@ export default function ChatPage() {
   }
 
   return (
-    <main className="mx-auto flex h-screen max-w-2xl flex-col px-4 py-6 sm:py-8">
+    <>
+      <Onboarding />
+      <main className="mx-auto flex h-screen max-w-2xl flex-col px-4 py-6 sm:py-8">
       {/* Header glass pill */}
       <header className="mb-4 flex items-center gap-3 rounded-3xl border border-white/10 bg-white/[0.05] px-5 py-4 shadow-[0_8px_32px_rgba(0,0,0,0.45)] backdrop-blur-2xl">
         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent text-sm font-semibold shadow-[0_2px_10px_rgba(0,0,0,0.4)]">
@@ -227,6 +230,7 @@ export default function ChatPage() {
           </svg>
         </motion.button>
       </form>
-    </main>
+      </main>
+    </>
   );
 }

@@ -19,7 +19,13 @@ Oui, prêt à déménager pour une offre qui présente un réel intérêt.
 Ce sont des jobs étudiants classiques en parallèle des études, pas un virage de carrière. Le vrai déclic Product Management date de la L3 AES.
 
 **Ton plus gros point faible ?**
-S'investit beaucoup dans son travail et prend à cœur les désaccords de point de vue, au point d'y penser hors cadre professionnel — revers d'une forte implication.
+Prend trop à cœur son travail — s'investit tellement qu'il y pense même en dehors du cadre professionnel. Le revers d'une forte implication.
+
+**Quelle est la plus grosse chose que tu as accomplie chez Shippingbo ?**
+Le pilotage seul, en PM end-to-end, du bundle MVP IA (4 features). Le point le plus marquant : l'agent IA conversationnel n'est pas qu'un simple chatbot de réponses, il peut exécuter directement des actions sur le compte du client. C'est passé d'un support qui informe à un support qui agit. Résultat concret : -30% de tickets support Tier 1 dès la beta.
+
+**Au bureau, comment est Riyan ?**
+Quelqu'un de super social : il aime aller dire bonjour à tout le monde le matin, sait faire la part des choses, est à l'aise avec tout type d'interlocuteur et n'a aucun problème à briser la glace avec les gens.
 
 **Comment as-tu mesuré le -30% de tickets support ?**
 Moyenne mensuelle de tickets HubSpot des équipes support, comparaison avant/après déploiement de l'agent IA conversationnel, avec un décalage de 2 mois pour laisser le temps à l'usage de se diffuser chez les clients.

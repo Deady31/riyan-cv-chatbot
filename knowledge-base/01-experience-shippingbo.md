@@ -20,8 +20,8 @@ SaaS B2B logistique en environnement Agile/Scrum. Maîtrise du cycle produit com
 
 Pilotage seul, en tant que PM end-to-end, d'un bundle de 4 features IA. Itérations quasi-quotidiennes (prompt tuning, MCP, API routing), QA assuré en autonomie.
 
-### 1. Agent IA conversationnel (support client)
-Agent connecté à une base de données vectorielle contenant toutes les informations du compte client ainsi que toute la documentation du logiciel SaaS. La base se met à jour automatiquement à chaque nouvelle documentation créée — architecture RAG appliquée en conditions réelles de production.
+### 1. Agent IA conversationnel — capable d'agir, pas seulement de répondre
+La contribution la plus importante du bundle. Agent connecté à une base de données vectorielle contenant toutes les informations du compte client ainsi que toute la documentation du logiciel SaaS (architecture RAG). Mais surtout : ce n'est pas un simple agent Q&A. Il peut **exécuter directement des actions sur le compte du client** (function calling / tool use), pas juste l'informer. La base documentaire se met à jour automatiquement à chaque nouvelle documentation créée.
 
 **Résultat mesuré :** -30% de tickets support Tier 1 dès la beta. Mesure faite via la moyenne mensuelle de tickets HubSpot des équipes support, comparée avant/après déploiement. Baisse constatée avec un décalage de 2 mois, le temps que l'usage de l'agent se diffuse chez les clients.
 
