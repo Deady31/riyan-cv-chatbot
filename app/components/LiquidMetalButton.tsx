@@ -8,12 +8,20 @@ interface LiquidMetalButtonProps {
   label?: string;
   onClick?: () => void;
   viewMode?: "text" | "icon";
+  icon?: React.ReactNode;
+  size?: number;
+  disabled?: boolean;
+  type?: "button" | "submit";
 }
 
 export function LiquidMetalButton({
   label = "Get Started",
   onClick,
   viewMode = "text",
+  icon,
+  size = 46,
+  disabled = false,
+  type = "button",
 }: LiquidMetalButtonProps) {
   const [isHovered, setIsHovered] = useState(false);
   const [isPressed, setIsPressed] = useState(false);
@@ -31,12 +39,12 @@ export function LiquidMetalButton({
   const dimensions = useMemo(() => {
     if (viewMode === "icon") {
       return {
-        width: 46,
-        height: 46,
-        innerWidth: 42,
-        innerHeight: 42,
-        shaderWidth: 46,
-        shaderHeight: 46,
+        width: size,
+        height: size,
+        innerWidth: size - 4,
+        innerHeight: size - 4,
+        shaderWidth: size,
+        shaderHeight: size,
       };
     } else {
       return {
@@ -48,7 +56,7 @@ export function LiquidMetalButton({
         shaderHeight: 46,
       };
     }
-  }, [viewMode]);
+  }, [viewMode, size]);
 
   useEffect(() => {
     const styleId = "shader-canvas-style-exploded";
@@ -201,17 +209,18 @@ export function LiquidMetalButton({
               pointerEvents: "none",
             }}
           >
-            {viewMode === "icon" && (
-              <Sparkles
-                size={16}
-                style={{
-                  color: "#666666",
-                  filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.5))",
-                  transition: "all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)",
-                  transform: "scale(1)",
-                }}
-              />
-            )}
+            {viewMode === "icon" &&
+              (icon ?? (
+                <Sparkles
+                  size={16}
+                  style={{
+                    color: "#666666",
+                    filter: "drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.5))",
+                    transition: "all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)",
+                    transform: "scale(1)",
+                  }}
+                />
+              ))}
             {viewMode === "text" && (
               <span
                 style={{
@@ -306,6 +315,8 @@ export function LiquidMetalButton({
 
           <button
             ref={buttonRef}
+            type={type}
+            disabled={disabled}
             onClick={handleClick}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
@@ -319,7 +330,8 @@ export function LiquidMetalButton({
               height: `${dimensions.height}px`,
               background: "transparent",
               border: "none",
-              cursor: "pointer",
+              cursor: disabled ? "not-allowed" : "pointer",
+              opacity: disabled ? 0.4 : 1,
               outline: "none",
               zIndex: 40,
               transformStyle: "preserve-3d",

@@ -8,8 +8,24 @@ import CopyButton from "./components/CopyButton";
 import MessageContent from "./components/MessageContent";
 import TypingIndicator from "./components/TypingIndicator";
 import Onboarding from "./components/Onboarding";
+import { LiquidMetalButton } from "./components/LiquidMetalButton";
+import { LiquidMetalRing } from "./components/LiquidMetalRing";
 import { playReceive, playSend } from "@/lib/sound";
 import { getOrCreateConversationId } from "@/lib/clientConversation";
+
+const LINKEDIN_URL = "https://www.linkedin.com/in/riyan-besseghir-8514a425b";
+
+const LinkedInIcon = (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="#e8e8e8">
+    <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z" />
+  </svg>
+);
+
+const SendIcon = (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#e8e8e8" strokeWidth="2.5">
+    <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+);
 
 type ChatMessage = { role: "user" | "assistant"; content: string; time: string };
 
@@ -99,8 +115,7 @@ export default function ChatPage() {
 
       if (!muted) playReceive();
     } catch (err) {
-      const fallback =
-        "Oups, erreur de mon côté. Réessaie dans un instant, ou contacte-moi directement sur LinkedIn.";
+      const fallback = "Oups, erreur de mon côté. Réessaie dans un instant.";
       const message = err instanceof Error && err.message ? err.message : fallback;
       setMessages((prev) => {
         const updated = [...prev];
@@ -127,13 +142,16 @@ export default function ChatPage() {
       <main className="mx-auto flex h-screen max-w-2xl flex-col px-4 py-6 sm:py-8">
       {/* Header glass pill */}
       <header className="mb-4 flex items-center gap-3 rounded-3xl border border-white/10 bg-black/45 px-5 py-4 shadow-[0_8px_32px_rgba(0,0,0,0.45)] backdrop-blur-2xl">
-        <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.4)]">
+        <LiquidMetalRing width={44} height={44} borderRadius={9999} ringWidth={2.5}>
           <Image src="/meca-riyan.jpg" alt="Méca-Riyan" width={40} height={40} className="h-full w-full object-cover" />
-        </div>
+        </LiquidMetalRing>
         <div className="flex-1">
           <h1 className="text-shadow-glass text-base font-semibold tracking-tight">Méca-Riyan</h1>
           <p className="text-shadow-glass text-xs text-white/70">Mon CV ne répond plus — pose-moi tes questions</p>
         </div>
+        <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer" aria-label="Voir le profil LinkedIn de Riyan">
+          <LiquidMetalButton viewMode="icon" size={34} icon={LinkedInIcon} label="LinkedIn" />
+        </a>
         <button
           type="button"
           onClick={toggleMute}
@@ -213,30 +231,29 @@ export default function ChatPage() {
         ))}
       </div>
 
-      {/* Input glass pill */}
-      <form
-        onSubmit={handleSubmit}
-        className="mt-3 flex items-center gap-2 rounded-full border border-white/12 bg-black/45 p-1.5 shadow-[0_8px_32px_rgba(0,0,0,0.4)] backdrop-blur-2xl focus-within:border-accent/50"
-      >
-        <input
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Pose ta question..."
-          className="text-shadow-glass flex-1 bg-transparent px-3 py-2 text-sm text-white placeholder-white/55 outline-none"
-          disabled={isStreaming}
-        />
-        <motion.button
-          type="submit"
-          disabled={isStreaming || !input.trim()}
-          aria-label="Envoyer"
-          whileTap={{ scale: 0.88 }}
-          className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent text-white shadow-[0_2px_10px_rgba(0,0,0,0.4)] transition-transform hover:scale-105 disabled:opacity-40 disabled:hover:scale-100"
+      {/* Input glass pill — contour liquid metal */}
+      <LiquidMetalRing width="100%" height={56} borderRadius={9999} ringWidth={2} className="mt-3">
+        <form
+          onSubmit={handleSubmit}
+          className="flex h-full items-center gap-2 rounded-full bg-black/60 px-2 backdrop-blur-2xl"
         >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-            <path d="M5 12h14M13 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </motion.button>
-      </form>
+          <input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            placeholder="Pose ta question..."
+            className="text-shadow-glass flex-1 bg-transparent px-3 py-2 text-sm text-white placeholder-white/55 outline-none"
+            disabled={isStreaming}
+          />
+          <LiquidMetalButton
+            viewMode="icon"
+            size={38}
+            icon={SendIcon}
+            label="Envoyer"
+            type="submit"
+            disabled={isStreaming || !input.trim()}
+          />
+        </form>
+      </LiquidMetalRing>
       </main>
     </>
   );

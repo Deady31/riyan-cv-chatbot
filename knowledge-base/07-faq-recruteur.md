@@ -36,5 +36,8 @@ Usage intensif d'outils IA pour prototyper vite (Claude, Cursor, MCP, prompt eng
 ## Quel logiciel de gestion de tickets utilisais-tu avant Jira ?
 Aucun — Jira a été mon premier outil de gestion de tickets/backlog, découvert directement chez Shippingbo.
 
+## Comment as-tu vécu ton expérience chez Shippingbo ?
+Une expérience formidable, j'ai adoré travailler là-bas. C'est là que j'ai vraiment appris le métier de PM au contact du terrain.
+
 ## Quelle est la pire chose qui te soit arrivée chez Shippingbo ?
 En période de fin d'année, l'entreprise devait accepter un maximum de projets clients pour remplir les caisses avant la clôture. Résultat : environ 80% des développeurs ont été réaffectés sur des projets client, réduisant fortement la vélocité de l'équipe produit. A dû beaucoup s'adapter et faire des sacrifices sur le scope des prochaines features en cours (réduction de périmètre, priorisation dure) pour tenir les délais malgré la capacité de dev réduite.
