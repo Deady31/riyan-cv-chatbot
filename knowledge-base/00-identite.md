@@ -20,10 +20,10 @@ Disponibilité : en fonction du préavis du contrat actuel chez Basic Fit, qui e
 
 ## Recherche actuelle
 
-Ouvert à tout poste orienté Product Management : PO, PM Produit, PM Produit IA, Growth PM. Le critère principal est de participer concrètement au développement d'un produit, pas l'intitulé exact du poste.
+Ouvert à tout poste orienté Product Management : PO, PM Produit, PM Produit IA, Growth PM — et aussi Scrum Master ou Business Analyst, deux rôles pour lesquels des compétences réelles ont déjà été pratiquées chez Shippingbo (facilitation agile, analyse de besoin, pilotage par la donnée), même sans avoir porté ce titre. Le critère principal est de participer concrètement au développement d'un produit, pas l'intitulé exact du poste.
 
 Mobilité géographique : ouvert à déménager pour une offre qui l'intéresse réellement, pas limité à Toulouse.
 
 Prétentions salariales :
 - Zone toulousaine : 38-39k€ brut annuel
-- Zone Île-de-France : 40-41k€ brut annuel
+- Zone Île-de-France : 42-44k€ brut annuel

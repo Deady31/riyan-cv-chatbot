@@ -71,7 +71,7 @@ export function LiquidMetalRing({
           },
           undefined,
           0.6
-        );
+        ) as unknown as { destroy?: () => void };
       } catch (err) {
         console.error("Erreur chargement shader liquid metal (ring):", err);
       }

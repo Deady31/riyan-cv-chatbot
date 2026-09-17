@@ -10,7 +10,7 @@ En fonction du préavis du contrat actuel (20h/semaine, Basic Fit) — environ 1
 Ouvert : PO, PM Produit, PM Produit IA, Growth PM. Le critère central est de participer concrètement au développement d'un produit.
 
 ## Quelles sont tes prétentions salariales ?
-38-39k€ brut/an en zone toulousaine, 40-41k€ brut/an en Île-de-France.
+38-39k€ brut/an en zone toulousaine, 42-44k€ brut/an en Île-de-France.
 
 ## Tu es mobile géographiquement ?
 Oui, prêt à déménager pour une offre qui présente un réel intérêt.
@@ -41,3 +41,15 @@ Une expérience formidable, j'ai adoré travailler là-bas. C'est là que j'ai v
 
 ## Quelle est la pire chose qui te soit arrivée chez Shippingbo ?
 En période de fin d'année, l'entreprise devait accepter un maximum de projets clients pour remplir les caisses avant la clôture. Résultat : environ 80% des développeurs ont été réaffectés sur des projets client, réduisant fortement la vélocité de l'équipe produit. A dû beaucoup s'adapter et faire des sacrifices sur le scope des prochaines features en cours (réduction de périmètre, priorisation dure) pour tenir les délais malgré la capacité de dev réduite.
+
+## Donne-moi un exemple de leadership ou d'influence sans autorité hiérarchique
+Le pilotage du bundle MVP IA (4 features) s'est fait en autonomie, sans lien hiérarchique direct sur les devs ni sur le support. Fédérer les deux équipes autour d'un objectif commun s'est fait par la clarté du besoin et la donnée, pas par l'autorité — c'est ce type d'influence qui a permis de tenir le projet jusqu'au -30% de tickets support.
+
+## Comment gères-tu un désaccord avec une partie prenante (dev, client, manager) ?
+Exemple concret : quand la capacité de dev a chuté de 80% en fin d'année, désaccords potentiels sur quelles features sauver. Priorisation tranchée sur la base de l'impact business et de la donnée plutôt que sur un rapport de force, avec transparence totale sur la contrainte auprès de toutes les parties — ça évite le conflit frontal et ça garde la confiance de l'équipe.
+
+## Parle-moi d'une décision difficile que tu as prise
+Sur le bundle MVP IA, le choix le plus risqué a été de pousser l'agent conversationnel au-delà d'un simple chatbot de réponses, jusqu'à lui faire exécuter directement des actions sur le compte client. Plus ambitieux, plus risqué techniquement, mais c'est ce pari qui a produit le vrai résultat (-30% de tickets), pas la version "safe" purement informative.
+
+## Quel est ton plus gros échec ou ta plus grosse leçon apprise ?
+Ne pas avoir anticipé le risque de perte massive de capacité de dev en fin d'année chez Shippingbo — a dû réagir dans l'urgence plutôt que d'avoir prévu un scope de secours en amont. Leçon retenue : toujours garder une marge de priorisation prête à l'avance sur les projets produit, plutôt que de découvrir la contrainte en cours de route.
