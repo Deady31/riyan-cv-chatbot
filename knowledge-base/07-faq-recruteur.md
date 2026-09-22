@@ -40,7 +40,7 @@ Aucun — Jira a été mon premier outil de gestion de tickets/backlog, découve
 Une expérience formidable, j'ai adoré travailler là-bas. C'est là que j'ai vraiment appris le métier de PM au contact du terrain.
 
 ## Quelle est la pire chose qui te soit arrivée chez Shippingbo ?
-En période de fin d'année, l'entreprise devait accepter un maximum de projets clients pour remplir les caisses avant la clôture. Résultat : environ 80% des développeurs ont été réaffectés sur des projets client, réduisant fortement la vélocité de l'équipe produit. A dû beaucoup s'adapter et faire des sacrifices sur le scope des prochaines features en cours (réduction de périmètre, priorisation dure) pour tenir les délais malgré la capacité de dev réduite.
+En période de fin d'année, l'entreprise a réorienté une grande partie des devs vers des projets clients (décision business de la direction). Résultat : environ 80% des développeurs ont été réaffectés sur des projets client, réduisant fortement la vélocité de l'équipe produit. A dû beaucoup s'adapter et faire des sacrifices sur le scope des prochaines features en cours (réduction de périmètre, priorisation dure) pour tenir les délais malgré la capacité de dev réduite.
 
 ## Donne-moi un exemple de leadership ou d'influence sans autorité hiérarchique
 Le pilotage du bundle MVP IA (4 features) s'est fait en autonomie, sans lien hiérarchique direct sur les devs ni sur le support. Fédérer les deux équipes autour d'un objectif commun s'est fait par la clarté du besoin et la donnée, pas par l'autorité — c'est ce type d'influence qui a permis de tenir le projet jusqu'au -30% de tickets support.
