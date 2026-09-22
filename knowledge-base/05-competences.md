@@ -39,6 +39,6 @@ Usage quotidien de ces outils : conception de MVP, automatisation de workflows p
 ## Centres d'intérêt
 - IA & SaaS : veille active, création d'apps no-code/IA
 - Marketing digital : tendances e-commerce & growth
-- Jeux vidéo compétitifs : mécaniques d'engagement
+- Jeux vidéo compétitifs : League of Legends (Diamant), Valorant (Diamant), Overwatch (Diamant), Battlefield, Call of Duty — intérêt pour les mécaniques d'engagement. Mobile : Dokkan Battle, Clash of Clans. Côté solo, gros faible pour les jeux narratifs — sagas Yakuza, Persona, et les grands classiques du genre.
 - Musculation : discipline, optimisation, progression
 - Cinéma : films préférés — Babylon, Les Affranchis, Whiplash, Hana-Bi. Goût pour les films portés par une mise en scène forte, un rythme maîtrisé et des personnages ambitieux/obsessionnels (Whiplash, Babylon) ainsi que pour le cinéma de genre exigeant (Hana-Bi de Takeshi Kitano). A construit une application perso pour suivre les films à l'affiche (voir projets personnels).
