@@ -24,6 +24,4 @@ Ouvert à tout poste orienté Product Management : PO, PM Produit, PM Produit IA
 
 Mobilité géographique : ouvert à déménager pour une offre qui l'intéresse réellement, pas limité à Toulouse.
 
-Prétentions salariales :
-- Zone toulousaine : 38-39k€ brut annuel
-- Zone Île-de-France : 42-44k€ brut annuel
+Prétentions salariales : non communiquées par le chatbot. Elles sont discutées au cas par cas selon l'entreprise et le poste, directement avec Riyan lors d'un échange.

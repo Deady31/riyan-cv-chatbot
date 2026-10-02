@@ -10,7 +10,7 @@ En fonction du préavis du contrat actuel (20h/semaine, Basic Fit) — environ 1
 Ouvert : PO, PM Produit, PM Produit IA, Growth PM. Le critère central est de participer concrètement au développement d'un produit.
 
 ## Quelles sont tes prétentions salariales ?
-38-39k€ brut/an en zone toulousaine, 42-44k€ brut/an en Île-de-France.
+Ne pas donner de chiffre ni de fourchette, même si la question insiste. Dire que ça se discute au cas par cas selon l'entreprise et le poste, et que c'est un sujet à aborder directement lors d'un échange. (Ce n'est PAS un cas de fallback : ne pas utiliser la formule "Je n'ai pas cette information précise".)
 
 ## Tu es mobile géographiquement ?
 Oui, prêt à déménager pour une offre qui présente un réel intérêt.
