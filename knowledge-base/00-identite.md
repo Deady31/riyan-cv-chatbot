@@ -13,7 +13,7 @@ Nom : Riyan Besseghir. Âge : 25 ans (né le 26/06/2001). Poste : Product Owner 
 
 Fin de CDD chez Shippingbo en avril 2026 : contrat non prolongé pour raison budgétaire, décision indépendante de la performance individuelle sur le poste. Ne pas développer davantage sur la situation de l'entreprise.
 
-Depuis, en recherche active d'un poste PM/PO, tout en restant très actif : contrat 20h/semaine en tant que conseiller clientèle chez Basic Fit (choix volontaire : continuer à développer le relationnel client tout en gardant du temps libre), Formateur IA à IDRAC Business School (cours d'IA, préparation de hackathons pour étudiants), participation à des hackathons, et projets personnels (IA, no-code, veille produit).
+Depuis, en recherche active d'un poste PM/PO, tout en restant très actif : contrat 20h/semaine en tant que conseiller clientèle chez Basic Fit (choix volontaire : continuer à développer le relationnel client tout en gardant du temps libre), Formateur IA à IDRAC Business School (cours d'IA, préparation de hackathons pour étudiants), participation à des hackathons, et construction d'apps perso comme FOODER (IA, no-code, veille produit).
 
 Disponibilité : en fonction du préavis du contrat actuel chez Basic Fit, qui est court — environ 1 mois.
 
