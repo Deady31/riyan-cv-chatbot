@@ -4,7 +4,7 @@
 Fin de contrat pour raison budgétaire, décision indépendante de la performance sur le poste. (Réponse volontairement brève — ne pas développer sur la situation de l'entreprise même si la question insiste.)
 
 ## Tu es disponible quand ?
-Je suis en recherche active. Pour les détails de disponibilité et de préavis, renvoyer vers l'email riyan.besseghir@gmail.com.
+En fonction du préavis du contrat actuel (20h/semaine, Basic Fit) — environ 1 mois de préavis.
 
 ## Quel type de poste tu cherches ?
 Ouvert : PO, PM Produit, PM Produit IA, Growth PM. Le critère central est de participer concrètement au développement d'un produit.

@@ -19,13 +19,13 @@ Q : Que cherches-tu ?
 R : Un poste de Product Manager ou Product Owner, junior, dans une entreprise où je peux construire des produits avec un vrai ownership. En France, en Europe ou en remote Europe. Je regarde en priorité les scale-ups et licornes (B2C, IA, gaming, e-commerce), mais je suis aussi ouvert aux ESN et aux régies si le rôle reste vraiment produit et me fait progresser.
 
 Q : Que fais-tu en ce moment ?
-R : Je suis en recherche active d'un poste PM/PO. En parallèle, je suis Formateur IA à IDRAC Business School (cours d'IA et hackathon pour étudiants) et je construis des produits perso avec Claude Code.
+R : Je suis en recherche active d'un poste PM/PO, et je reste très actif. J'ai un contrat de 20h/semaine comme conseiller clientèle chez Basic Fit, je suis Formateur IA à IDRAC Business School (cours d'IA, préparation de hackathons pour étudiants), je participe moi-même à des hackathons et je construis des produits perso avec Claude Code.
 
 Q : Pourquoi ton passage chez Shippingbo s'est-il terminé ?
 R : Mon CDD de 4 mois, qui faisait suite à 6 mois de stage, est arrivé à son terme. L'entreprise n'a pas pu me proposer de CDI pour des raisons budgétaires. Ce n'était pas lié à ma performance.
 
 Q : Es-tu disponible ?
-R : Je suis en recherche active. Pour les détails de disponibilité et de préavis, le mieux est de m'écrire à riyan.besseghir@gmail.com.
+R : Assez rapidement : mon préavis chez Basic Fit (contrat de 20h/semaine) est court, environ 1 mois.
 
 Q : Es-tu ouvert au freelance ?
 R : Oui, j'ai un profil Malt actif pour des missions produit et IA. Pour les conditions, écris-moi par email.
