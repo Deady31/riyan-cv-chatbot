@@ -1,35 +1,36 @@
-# Expérience principale — Shippingbo
+## Expérience Shippingbo — Product Manager / Product Owner (Riyan Besseghir)
+Q : Quelle est ton expérience professionnelle principale ?
+R : Product Manager / Product Owner chez Shippingbo (Facilecomm), de juillet 2025 à avril 2026 : 6 mois de stage puis 4 mois de CDD. Shippingbo est un SaaS B2B de logistique (OMS, WMS, TMS), scale-up basée à Toulouse. J'ai piloté jusqu'à 3 feature teams en parallèle.
 
-**Product Owner / Product Manager Junior**
-Shippingbo · SaaS B2B logistique (OMS, WMS, TMS) · Stage → CDD · Toulouse
-Juillet 2025 → Avril 2026 (10 mois)
+Q : Quel est ton projet phare ?
+R : Shippingbo Intelligence, un bundle de 4 features IA livré de zéro en production. J'étais seul PM, de la discovery à la delivery, et j'ai aussi conçu la roadmap, y compris des features sorties après mon départ.
 
-## Contexte
-SaaS B2B logistique en environnement Agile/Scrum. Maîtrise du cycle produit complet : conception, delivery, recette, mise en production.
+Q : Comment as-tu mené la discovery chez Shippingbo ?
+R : J'ai préparé un guide d'entretien, interviewé 4 clients grands comptes, retranscrit les calls avec un logiciel (Modjo), fait la synthèse des besoins, puis arbitré le scope des features à livrer.
 
-## Missions générales
-- Pilotage de livraison de features de bout en bout : conception avec équipes métier jusqu'à mise en production, respect délais et qualité (Definition of Done).
-- Gestion et priorisation du backlog produit : structuration Epics, User Stories, tâches techniques ; mise à jour continue selon arbitrages business et retours terrain.
-- Recette fonctionnelle en autonomie : validation des développements, identification anomalies, coordination corrections avant chaque mise en production.
-- Animation de tous les rituels Scrum : sprint planning, backlog refinement, daily, sprint review, retrospective.
-- Coordination des dépendances entre équipes dev internes et prestataires externes ; anticipation des risques, gestion des impédiments pour maintenir la vélocité.
-- Support utilisateurs : analyse des remontées incidents, traitement des demandes spécifiques, boucle de feedback quotidienne avec le Head of Customer Support.
-- Contribution à la roadmap : priorisation orientée impact métier (MoSCoW, valeur/effort), challenge technique des équipes dev sur performance et fiabilité.
+Q : Comment s'est passée la delivery chez Shippingbo ?
+R : L'équipe comptait 1 designer, 1 dev front et 2 devs back. Je faisais les maquettes Figma et des POC avant le développement, puis la QA en autonomie. Quand des devs ont été réaffectés à d'autres projets en cours de route, j'ai re-priorisé le backlog et maîtrisé le scope pour maintenir la date de sortie. J'ai aussi fait le go-to-market avec la Product Marketing Manager.
 
-## Contribution clé — Pilotage MVP IA (bundle de 4 features)
+## Shippingbo Intelligence — les 4 features du bundle (Riyan Besseghir)
+Q : Quelles sont les 4 features du bundle ?
+R :
+1. Naia, un agent conversationnel connecté aux données live du compte client et à la documentation du logiciel, mise à jour par workflow. Je l'ai fait évoluer d'un chatbot vers un agent qui exécute des actions. Il sert aussi à l'onboarding interne.
+2. Les audits IA : ventes, catalogue, retours et transporteurs, avec des recommandations actionnables.
+3. La classification ABCD automatique des produits (logique Pareto), pour aider les e-commerçants à prioriser leur catalogue.
+4. La détection de commandes identiques sur la page Session de préparation (la plus utilisée de la plateforme). C'est la feature la plus utilisée du bundle.
 
-Pilotage seul, en tant que PM end-to-end, d'un bundle de 4 features IA. Itérations quasi-quotidiennes (prompt tuning, MCP, API routing), QA assuré en autonomie.
+Q : Quel résultat chiffré as-tu obtenu ?
+R : L'agent Naia a permis de réduire de 56 % les tickets support de niveau 1 en production. C'est la seule métrique chiffrée que j'avance, car c'est la seule que je peux sourcer.
 
-### 1. Agent IA conversationnel — capable d'agir, pas seulement de répondre
-La contribution la plus importante du bundle. Agent connecté à une base de données vectorielle contenant toutes les informations du compte client ainsi que toute la documentation du logiciel SaaS (architecture RAG). Mais surtout : ce n'est pas un simple agent Q&A. Il peut **exécuter directement des actions sur le compte du client** (function calling / tool use), pas juste l'informer. La base documentaire se met à jour automatiquement à chaque nouvelle documentation créée.
+Q : Quelle stack IA as-tu utilisée chez Shippingbo ?
+R : L'API Claude avec une orchestration entre Haiku et Sonnet, du RAG sur la documentation et les données du compte, du function calling (tool use) et du MCP.
 
-**Résultat mesuré :** -30% de tickets support Tier 1 dès la beta. Mesure faite via la moyenne mensuelle de tickets HubSpot des équipes support, comparée avant/après déploiement. Baisse constatée avec un décalage de 2 mois, le temps que l'usage de l'agent se diffuse chez les clients.
+Q : Quelle feature est la plus utilisée et pourquoi ?
+R : La détection de commandes identiques. Le problème était réel (les logisticiens traitent à la main des commandes quasi identiques), la solution était simple et l'adoption a été immédiate. C'est ce que j'aime en product : identifier le bon problème, puis le résoudre simplement.
 
-### 2. Audits logistiques IA
-Analyse automatisée des données client sur 4 catégories : transport, ventes, commandes, retours. Le client reçoit un rapport détaillé avec pistes d'amélioration, zones à surveiller, changements à faire.
+## Shippingbo — B2C, e-commerce et expertise logistique (Riyan Besseghir)
+Q : As-tu travaillé sur du B2C ou de l'e-commerce ?
+R : Oui, sur l'intégration de l'API TikTok Shop, dans le cadre du partenariat officiel 3P de Shippingbo : architecture des flows multi-marchés, mapping du catalogue, gestion des commandes B2C. C'est mon pont concret entre le B2B et le B2C.
 
-### 3. Classification ABCD des produits
-Feature "intelligente" plus qu'IA pure : un algorithme détermine quels produits tournent le plus en entrepôt, lesquels sont déplacés/pickés le plus souvent. Le client peut ensuite réorganiser la disposition physique de son entrepôt en conséquence.
-
-### 4. Détection de commandes identiques
-Objectif : réduire les allers-retours des préparateurs de commandes. Si plusieurs commandes contiennent des produits similaires/identiques, le système le détecte pour permettre une préparation groupée — gain de temps significatif (secondes à heures cumulées).
+Q : Quel est ton domaine d'expertise métier ?
+R : La logistique et la supply chain : OMS (gestion des commandes), WMS (entrepôt) et TMS (transport). C'est un différenciateur sur les rôles supply chain et e-commerce.
