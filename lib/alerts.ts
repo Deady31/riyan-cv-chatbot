@@ -2,7 +2,7 @@ import { getServiceRoleClient } from "./supabase";
 
 // Phrase de repli exacte imposée par system-prompt.md quand le bot n'a pas
 // l'info — sert de signal fiable pour détecter une question sans réponse.
-const NO_ANSWER_MARKER = "Je n'ai pas cette information précise, mais tu peux me contacter directement sur LinkedIn";
+const NO_ANSWER_MARKER = "Je n'ai pas cette information sous la main";
 
 export function isUnanswered(assistantText: string): boolean {
   return assistantText.includes(NO_ANSWER_MARKER);

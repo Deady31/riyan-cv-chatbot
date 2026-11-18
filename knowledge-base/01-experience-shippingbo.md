@@ -23,7 +23,7 @@ Pilotage seul, en tant que PM end-to-end, d'un bundle de 4 features IA. Itérati
 ### 1. Agent IA conversationnel — capable d'agir, pas seulement de répondre
 La contribution la plus importante du bundle. Agent connecté à une base de données vectorielle contenant toutes les informations du compte client ainsi que toute la documentation du logiciel SaaS (architecture RAG). Mais surtout : ce n'est pas un simple agent Q&A. Il peut **exécuter directement des actions sur le compte du client** (function calling / tool use), pas juste l'informer. La base documentaire se met à jour automatiquement à chaque nouvelle documentation créée.
 
-**Résultat mesuré :** -30% de tickets support Tier 1 dès la beta. Mesure faite via la moyenne mensuelle de tickets HubSpot des équipes support, comparée avant/après déploiement. Baisse constatée avec un décalage de 2 mois, le temps que l'usage de l'agent se diffuse chez les clients.
+**Résultat mesuré :** -56% de tickets support de niveau 1 en production. C'est la seule métrique chiffrée avancée, car c'est la seule qui peut être sourcée.
 
 ### 2. Audits logistiques IA
 Analyse automatisée des données client sur 4 catégories : transport, ventes, commandes, retours. Le client reçoit un rapport détaillé avec pistes d'amélioration, zones à surveiller, changements à faire.

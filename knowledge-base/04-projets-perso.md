@@ -12,7 +12,7 @@ Code source : https://github.com/Deady31/Overwatch-Nexus
 
 ## Cineappmovies — application films à l'affiche
 Application web qui recense les films en salle et en streaming autour de l'utilisateur, avec filtres par plateforme (Cinéma, Netflix, Prime Video, Disney+), tri (date, popularité, note), fiches détaillées (synopsis, durée, casting, bande-annonce) et recommandations de films similaires.
-Stack : Next.js, React, TypeScript, Tailwind CSS. Double intégration API : l'API TMDB pour les données films généralistes, et une API Pathé reverse-engineerée avec l'aide d'un agent IA (l'agent a exploré et testé les requêtes du site Pathé pour en extraire un accès fonctionnel aux séances par cinéma) pour les horaires de séances en temps réel.
+Stack : Next.js, React, TypeScript, Tailwind CSS. Intégration de l'API TMDB pour les données films.
 Code source : https://github.com/Deady31/Cineappmovies
 
 ## Invoicity
@@ -23,7 +23,7 @@ Développement rapide d'applications fonctionnelles via structured prompting, Cl
 
 ## Portfolio personnel
 Portfolio en ligne, conçu et développé de A à Z, avec pour inspiration visuelle un bureau macOS (interface façon desktop, icônes, fenêtres).
-En ligne : https://deady31.github.io/PortFolio/riyan.world.html
+En ligne : https://riyan-besseghir.vercel.app
 Code source : https://github.com/Deady31/PortFolio
 
 ## Bot de scraping offres d'emploi

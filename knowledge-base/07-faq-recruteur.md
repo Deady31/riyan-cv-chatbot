@@ -10,7 +10,7 @@ En fonction du préavis du contrat actuel (20h/semaine, Basic Fit) — environ 1
 Ouvert : PO, PM Produit, PM Produit IA, Growth PM. Le critère central est de participer concrètement au développement d'un produit.
 
 ## Quelles sont tes prétentions salariales ?
-38-39k€ brut/an en zone toulousaine, 42-44k€ brut/an en Île-de-France.
+Ne pas donner de chiffre ni de fourchette, même si la question insiste. Dire que ça se discute au cas par cas selon l'entreprise et le poste, et que c'est un sujet à aborder directement lors d'un échange. (Ce n'est PAS un cas de fallback : ne pas utiliser la formule "Je n'ai pas cette information précise".)
 
 ## Tu es mobile géographiquement ?
 Oui, prêt à déménager pour une offre qui présente un réel intérêt.
@@ -22,13 +22,10 @@ Ce sont des jobs étudiants classiques en parallèle des études, pas un virage 
 Prend trop à cœur son travail — s'investit tellement qu'il y pense même en dehors du cadre professionnel. Le revers d'une forte implication.
 
 ## Quelle est la plus grosse chose que tu as accomplie chez Shippingbo ?
-Le pilotage seul, en PM end-to-end, du bundle MVP IA (4 features). Le point le plus marquant : l'agent IA conversationnel n'est pas qu'un simple chatbot de réponses, il peut exécuter directement des actions sur le compte du client. C'est passé d'un support qui informe à un support qui agit. Résultat concret : -30% de tickets support Tier 1 dès la beta.
+Le pilotage seul, en PM end-to-end, du bundle MVP IA (4 features). Le point le plus marquant : l'agent IA conversationnel n'est pas qu'un simple chatbot de réponses, il peut exécuter directement des actions sur le compte du client. C'est passé d'un support qui informe à un support qui agit. Résultat concret : -56% de tickets support de niveau 1 en production.
 
 ## Au bureau, comment est Riyan ?
 Quelqu'un de super social : il aime aller dire bonjour à tout le monde le matin, sait faire la part des choses, est à l'aise avec tout type d'interlocuteur et n'a aucun problème à briser la glace avec les gens.
-
-## Comment as-tu mesuré le -30% de tickets support ?
-Moyenne mensuelle de tickets HubSpot des équipes support, comparaison avant/après déploiement de l'agent IA conversationnel, avec un décalage de 2 mois pour laisser le temps à l'usage de se diffuser chez les clients.
 
 ## Tu codes ou tu es plutôt "no-code/IA" ?
 Usage intensif d'outils IA pour prototyper vite (Claude, Cursor, MCP, prompt engineering, n8n) plutôt que du développement traditionnel — approche orientée validation rapide d'hypothèses produit.
@@ -43,13 +40,13 @@ Une expérience formidable, j'ai adoré travailler là-bas. C'est là que j'ai v
 En période de fin d'année, l'entreprise a réorienté une grande partie des devs vers des projets clients (décision business de la direction). Résultat : environ 80% des développeurs ont été réaffectés sur des projets client, réduisant fortement la vélocité de l'équipe produit. A dû beaucoup s'adapter et faire des sacrifices sur le scope des prochaines features en cours (réduction de périmètre, priorisation dure) pour tenir les délais malgré la capacité de dev réduite.
 
 ## Donne-moi un exemple de leadership ou d'influence sans autorité hiérarchique
-Le pilotage du bundle MVP IA (4 features) s'est fait en autonomie, sans lien hiérarchique direct sur les devs ni sur le support. Fédérer les deux équipes autour d'un objectif commun s'est fait par la clarté du besoin et la donnée, pas par l'autorité — c'est ce type d'influence qui a permis de tenir le projet jusqu'au -30% de tickets support.
+Le pilotage du bundle MVP IA (4 features) s'est fait en autonomie, sans lien hiérarchique direct sur les devs ni sur le support. Fédérer les deux équipes autour d'un objectif commun s'est fait par la clarté du besoin et la donnée, pas par l'autorité — c'est ce type d'influence qui a permis de tenir le projet jusqu'au -56% de tickets support de niveau 1.
 
 ## Comment gères-tu un désaccord avec une partie prenante (dev, client, manager) ?
 Exemple concret : quand la capacité de dev a chuté de 80% en fin d'année, désaccords potentiels sur quelles features sauver. Priorisation tranchée sur la base de l'impact business et de la donnée plutôt que sur un rapport de force, avec transparence totale sur la contrainte auprès de toutes les parties — ça évite le conflit frontal et ça garde la confiance de l'équipe.
 
 ## Parle-moi d'une décision difficile que tu as prise
-Sur le bundle MVP IA, le choix le plus risqué a été de pousser l'agent conversationnel au-delà d'un simple chatbot de réponses, jusqu'à lui faire exécuter directement des actions sur le compte client. Plus ambitieux, plus risqué techniquement, mais c'est ce pari qui a produit le vrai résultat (-30% de tickets), pas la version "safe" purement informative.
+Sur le bundle MVP IA, le choix le plus risqué a été de pousser l'agent conversationnel au-delà d'un simple chatbot de réponses, jusqu'à lui faire exécuter directement des actions sur le compte client. Plus ambitieux, plus risqué techniquement, mais c'est ce pari qui a produit le vrai résultat (-56% de tickets support de niveau 1), pas la version "safe" purement informative.
 
 ## Quel est ton plus gros échec ou ta plus grosse leçon apprise ?
 Ne pas avoir anticipé le risque de perte massive de capacité de dev en fin d'année chez Shippingbo — a dû réagir dans l'urgence plutôt que d'avoir prévu un scope de secours en amont. Leçon retenue : toujours garder une marge de priorisation prête à l'avance sur les projets produit, plutôt que de découvrir la contrainte en cours de route.
