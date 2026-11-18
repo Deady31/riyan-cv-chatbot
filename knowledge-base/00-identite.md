@@ -1,31 +1,27 @@
-## Identité et contact — Riyan Besseghir
-Q : Qui es-tu ? Présente-toi.
-R : Je suis Riyan Besseghir, 25 ans, de nationalité française, Product Manager / Product Owner junior. J'ai construit de zéro un bundle de 4 features IA en production chez Shippingbo, un SaaS B2B de logistique, en tant que seul PM. Je suis basé à Aussonne, près de Toulouse, et ouvert à Paris, Amsterdam, Berlin, au remote Europe et à la relocation internationale.
+# Identité & situation actuelle
 
-Q : Comment te contacter ?
-R : Par email : riyan.besseghir@gmail.com. Mon portfolio : https://riyan-besseghir.vercel.app. Mon GitHub : https://github.com/Deady31. Ce chatbot : https://riyan-cv-chatbot.vercel.app.
+## Identité
+Nom : Riyan Besseghir. Âge : 25 ans (né le 26/06/2001). Poste : Product Owner / Product Manager junior. Ville : Aussonne (31840), agglomération toulousaine. Nationalité française. Permis B, véhiculé.
 
-Q : Quelles langues parles-tu ?
-R : Français natif, anglais C1 (TOEIC), espagnol B2.
+## Contact
+- Email : riyan.besseghir@gmail.com
+- Téléphone : 06 45 88 92 22
+- GitHub : github.com/Deady31
+- LinkedIn : https://www.linkedin.com/in/riyan-besseghir-8514a425b
+- Portfolio : https://deady31.github.io/PortFolio/riyan.world.html
 
-Q : Quelle est ta formation ?
-R : Master 2 Économie Droit Gestion, option AES Gestion des Entreprises, à l'Université Toulouse Capitole (2023 à 2025).
+## Situation actuelle (à jour septembre 2026)
 
-Q : Où es-tu situé et quelle mobilité as-tu ?
-R : J'habite à Aussonne, près de Toulouse. Je suis ouvert à Paris, Amsterdam, Berlin, au remote Europe, et à une relocation internationale.
+Fin de CDD chez Shippingbo en avril 2026 : contrat non prolongé pour raison budgétaire, décision indépendante de la performance individuelle sur le poste. Ne pas développer davantage sur la situation de l'entreprise.
 
-## Situation actuelle et recherche — Riyan Besseghir
-Q : Que cherches-tu ?
-R : Un poste de Product Manager ou Product Owner, junior, dans une entreprise où je peux construire des produits avec un vrai ownership. En France, en Europe ou en remote Europe. Je regarde en priorité les scale-ups et licornes (B2C, IA, gaming, e-commerce), mais je suis aussi ouvert aux ESN et aux régies si le rôle reste vraiment produit et me fait progresser.
+Depuis, contrat 20h/semaine en tant que conseiller clientèle chez Basic Fit. Ce choix est volontaire : permet de continuer à développer le relationnel client tout en gardant du temps libre pour travailler sur des projets personnels (IA, no-code, veille produit).
 
-Q : Que fais-tu en ce moment ?
-R : Je suis en recherche active d'un poste PM/PO. En parallèle, je suis Formateur IA à IDRAC Business School (cours d'IA et hackathon pour étudiants) et je construis des produits perso avec Claude Code.
+Disponibilité : en fonction du préavis du contrat actuel chez Basic Fit, qui est court — environ 1 mois.
 
-Q : Pourquoi ton passage chez Shippingbo s'est-il terminé ?
-R : Mon CDD de 4 mois, qui faisait suite à 6 mois de stage, est arrivé à son terme. L'entreprise n'a pas pu me proposer de CDI pour des raisons budgétaires. Ce n'était pas lié à ma performance.
+## Recherche actuelle
 
-Q : Es-tu disponible ?
-R : Je suis en recherche active. Pour les détails de disponibilité et de préavis, le mieux est de m'écrire à riyan.besseghir@gmail.com.
+Ouvert à tout poste orienté Product Management : PO, PM Produit, PM Produit IA, Growth PM — et aussi Scrum Master ou Business Analyst, deux rôles pour lesquels des compétences réelles ont déjà été pratiquées chez Shippingbo (facilitation agile, analyse de besoin, pilotage par la donnée), même sans avoir porté ce titre. Le critère principal est de participer concrètement au développement d'un produit, pas l'intitulé exact du poste.
 
-Q : Es-tu ouvert au freelance ?
-R : Oui, j'ai un profil Malt actif pour des missions produit et IA. Pour les conditions, écris-moi par email.
+Mobilité géographique : ouvert à déménager pour une offre qui l'intéresse réellement, pas limité à Toulouse.
+
+Prétentions salariales : non communiquées par le chatbot. Elles sont discutées au cas par cas selon l'entreprise et le poste, directement avec Riyan lors d'un échange.
