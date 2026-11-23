@@ -1,7 +1,7 @@
 # Autres expériences
 
-## Actuelle — Conseiller clientèle, Basic Fit (20h/semaine)
-Depuis la fin du CDD Shippingbo. Choix volontaire : permet de continuer à développer le sens du relationnel client tout en dégageant du temps libre pour travailler sur des projets personnels en parallèle. Ne pas présenter comme une expérience produit — c'est un choix d'organisation pendant la recherche du prochain poste PM.
+## Actuelle — Conseiller clientèle, mon employeur actuel (20h/semaine)
+Depuis la fin du CDD chez mon précédent employeur. Choix volontaire : permet de continuer à développer le sens du relationnel client tout en dégageant du temps libre pour travailler sur des projets personnels en parallèle. Ne pas présenter comme une expérience produit — c'est un choix d'organisation pendant la recherche du prochain poste PM.
 
 ## Jobs étudiants (2022-2024) — à replacer dans leur contexte
 Ces expériences sont des jobs étudiants réalisés en parallèle des études, avant la bascule vers le Product Management. Elles ne doivent pas être présentées comme un pivot de carrière mais comme des jobs alimentaires classiques d'étudiant :

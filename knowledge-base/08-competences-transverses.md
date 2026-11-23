@@ -1,7 +1,7 @@
 # Compétences transverses — au-delà du titre "Product Manager"
 
 ## Pourquoi ce profil marche aussi pour Scrum Master
-Chez Shippingbo, usage quotidien des rituels agiles (sprint planning, backlog Jira, priorisation) sans porter le titre de Scrum Master. Quand la capacité de dev a chuté de 80% (réaffectation en fin d'année), rôle de facilitation directe : trancher les priorités, désamorcer les tensions liées au scope réduit, garder l'équipe alignée malgré la contrainte. C'est le cœur du métier de Scrum Master — enlever les blocages, faire vivre le cadre agile, protéger l'équipe — déjà pratiqué sans l'étiquette.
+Chez mon précédent employeur, usage quotidien des rituels agiles (sprint planning, backlog Jira, priorisation) sans porter le titre de Scrum Master. Quand la capacité de dev a chuté de 80% (réaffectation en fin d'année), rôle de facilitation directe : trancher les priorités, désamorcer les tensions liées au scope réduit, garder l'équipe alignée malgré la contrainte. C'est le cœur du métier de Scrum Master — enlever les blocages, faire vivre le cadre agile, protéger l'équipe — déjà pratiqué sans l'étiquette.
 
 ## Pourquoi ce profil marche aussi pour Business Analyst
 Le suivi du résultat (-56% de tickets support de niveau 1 en production) relève de l'analyse de besoin et de la preuve par la donnée, pas juste du pilotage produit. Le pilotage du bundle MVP IA a démarré par de l'analyse des besoins clients réels (pourquoi le support prenait du temps, quelles actions automatiser) avant toute spec — logique Business Analyst classique : comprendre le problème avant de proposer la solution.

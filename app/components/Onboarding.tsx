@@ -8,7 +8,7 @@ import { LiquidMetalButton } from "./LiquidMetalButton";
 const SEEN_KEY = "riyan-chatbot-onboarded";
 
 const EXAMPLES = [
-  "Parle-moi de ton expérience chez Shippingbo",
+  "Parle-moi de ton expérience chez ton précédent employeur",
   "Quelle est la pire chose qui te soit arrivée ?",
   "Tes films préférés ?",
 ];

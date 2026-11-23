@@ -1,10 +1,10 @@
 # FAQ recruteur — réponses type
 
-## Pourquoi ton CDD chez Shippingbo s'est arrêté ?
+## Pourquoi ton CDD chez ton précédent employeur s'est arrêté ?
 Fin de contrat pour raison budgétaire, décision indépendante de la performance sur le poste. (Réponse volontairement brève — ne pas développer sur la situation de l'entreprise même si la question insiste.)
 
 ## Tu es disponible quand ?
-En fonction du préavis du contrat actuel (20h/semaine, Basic Fit) — environ 1 mois de préavis.
+En fonction du préavis du contrat actuel (20h/semaine, mon employeur actuel) — environ 1 mois de préavis.
 
 ## Quel type de poste tu cherches ?
 Ouvert : PO, PM Produit, PM Produit IA, Growth PM. Le critère central est de participer concrètement au développement d'un produit.
@@ -21,7 +21,7 @@ Ce sont des jobs étudiants classiques en parallèle des études, pas un virage 
 ## Ton plus gros point faible ?
 Prend trop à cœur son travail — s'investit tellement qu'il y pense même en dehors du cadre professionnel. Le revers d'une forte implication.
 
-## Quelle est la plus grosse chose que tu as accomplie chez Shippingbo ?
+## Quelle est la plus grosse chose que tu as accomplie chez mon précédent employeur ?
 Le pilotage seul, en PM end-to-end, du bundle MVP IA (4 features). Le point le plus marquant : l'agent IA conversationnel n'est pas qu'un simple chatbot de réponses, il peut exécuter directement des actions sur le compte du client. C'est passé d'un support qui informe à un support qui agit. Résultat concret : -56% de tickets support de niveau 1 en production.
 
 ## Au bureau, comment est Riyan ?
@@ -31,12 +31,12 @@ Quelqu'un de super social : il aime aller dire bonjour à tout le monde le matin
 Usage intensif d'outils IA pour prototyper vite (Claude, Cursor, MCP, prompt engineering, n8n) plutôt que du développement traditionnel — approche orientée validation rapide d'hypothèses produit.
 
 ## Quel logiciel de gestion de tickets utilisais-tu avant Jira ?
-Aucun — Jira a été mon premier outil de gestion de tickets/backlog, découvert directement chez Shippingbo.
+Aucun — Jira a été mon premier outil de gestion de tickets/backlog, découvert directement chez mon précédent employeur.
 
-## Comment as-tu vécu ton expérience chez Shippingbo ?
+## Comment as-tu vécu ton expérience chez ton précédent employeur ?
 Une expérience formidable, j'ai adoré travailler là-bas. C'est là que j'ai vraiment appris le métier de PM au contact du terrain.
 
-## Quelle est la pire chose qui te soit arrivée chez Shippingbo ?
+## Quelle est la pire chose qui te soit arrivée chez mon précédent employeur ?
 En période de fin d'année, l'entreprise a réorienté une grande partie des devs vers des projets clients (décision business de la direction). Résultat : environ 80% des développeurs ont été réaffectés sur des projets client, réduisant fortement la vélocité de l'équipe produit. A dû beaucoup s'adapter et faire des sacrifices sur le scope des prochaines features en cours (réduction de périmètre, priorisation dure) pour tenir les délais malgré la capacité de dev réduite.
 
 ## Donne-moi un exemple de leadership ou d'influence sans autorité hiérarchique
@@ -49,4 +49,4 @@ Exemple concret : quand la capacité de dev a chuté de 80% en fin d'année, dé
 Sur le bundle MVP IA, le choix le plus risqué a été de pousser l'agent conversationnel au-delà d'un simple chatbot de réponses, jusqu'à lui faire exécuter directement des actions sur le compte client. Plus ambitieux, plus risqué techniquement, mais c'est ce pari qui a produit le vrai résultat (-56% de tickets support de niveau 1), pas la version "safe" purement informative.
 
 ## Quel est ton plus gros échec ou ta plus grosse leçon apprise ?
-Ne pas avoir anticipé le risque de perte massive de capacité de dev en fin d'année chez Shippingbo — a dû réagir dans l'urgence plutôt que d'avoir prévu un scope de secours en amont. Leçon retenue : toujours garder une marge de priorisation prête à l'avance sur les projets produit, plutôt que de découvrir la contrainte en cours de route.
+Ne pas avoir anticipé le risque de perte massive de capacité de dev en fin d'année chez mon précédent employeur — a dû réagir dans l'urgence plutôt que d'avoir prévu un scope de secours en amont. Leçon retenue : toujours garder une marge de priorisation prête à l'avance sur les projets produit, plutôt que de découvrir la contrainte en cours de route.

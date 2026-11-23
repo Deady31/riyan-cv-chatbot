@@ -1,7 +1,7 @@
-# Expérience principale — Shippingbo
+# Expérience principale — éditeur SaaS B2B
 
 **Product Owner / Product Manager Junior**
-Shippingbo · SaaS B2B logistique (OMS, WMS, TMS) · Stage → CDD · Toulouse
+Mon précédent employeur · SaaS B2B logistique (OMS, WMS, TMS) · Stage → CDD · Toulouse
 Juillet 2025 → Avril 2026 (10 mois)
 
 ## Contexte

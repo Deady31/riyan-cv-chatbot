@@ -30,7 +30,7 @@ const SendIcon = (
 type ChatMessage = { role: "user" | "assistant"; content: string; time: string };
 
 const SUGGESTIONS = [
-  "Ton expérience chez Shippingbo",
+  "Ton expérience chez mon précédent employeur",
   "Tu te vois où dans 4-5 ans ?",
   "Ton plus gros point faible",
   "Tes prétentions salariales",
